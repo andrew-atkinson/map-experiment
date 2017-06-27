@@ -4,13 +4,9 @@
     <meta charset="utf-8">
     <script src="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_week.geojsonp" type="text/javascript" charset="utf-8" async defer></script>
     <style>
-    /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-
     #map {
         height: 100%;
     }
-    /* Optional: Makes the sample page fill the window. */
 
     html,
     body {
@@ -34,8 +30,7 @@
             },
             zoom: 4,
             // mapTypeId: 'satellite',
-            styles:
-                [{
+            styles: [{
                     "elementType": "geometry",
                     "stylers": [{
                         "color": "#1d2c4d"
@@ -280,7 +275,8 @@
         var heatmap = new google.maps.visualization.HeatmapLayer({
             data: heatmapData,
             dissipating: false,
-            map: map
+            map: map,
+            gradient: ['rgba(255, 255, 205, 0)', 'rgba(120, 120, 0, 70)', 'rgba(250, 60, 10, 100)']
         });
     }
     </script>
